@@ -36,8 +36,7 @@ export const TeamsSection: React.FC<TeamsSectionProps> = ({ onPlaceholderClick }
         </div>
 
         {/* 5 Responsive Team Cards Grid */}
-        {/* Mobile: 1 col, Tablet: 2 cols, Laptop: 3 cols (with 2 centered) or 5 cols on XL */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-5 items-stretch">
           {TEAMS_DATA.map((team) => (
             <div key={team.id} className="flex">
               <TeamCard team={team} onPlaceholderClick={onPlaceholderClick} />

@@ -12,7 +12,7 @@ export const TEAM_FORM_LINKS = {
   contentDesign: 'https://forms.gle/6U6yR7aq9rioiNhRA',
 
   // Marketing & Outreach Team: Outreach campaigns, event promotions, and partnerships
-  marketingOutreach: 'PASTE_MARKETING_OUTREACH_FORM_URL',
+  marketingOutreach: 'https://forms.gle/aSr6LKkmEfhXgxjY7',
 
   // Community & Engagement Team: Student onboarding, discussions, and networking
   communityEngagement: 'https://forms.gle/5S3bxkBZm8iSb1zj7',

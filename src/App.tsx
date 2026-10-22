@@ -26,12 +26,12 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#050816] text-[#F8FAFC] selection:bg-[#FF9900]/30 selection:text-white">
+    <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#050816] text-[#F8FAFC] selection:bg-[#FF9900]/30 selection:text-white">
       {/* Sticky / Fixed Navigation */}
       <Navbar />
 
       {/* Main Page Flow */}
-      <main>
+      <main className="w-full max-w-full overflow-x-hidden">
         {/* Hero Section */}
         <HeroSection />
 

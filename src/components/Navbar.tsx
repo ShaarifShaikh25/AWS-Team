@@ -59,23 +59,23 @@ export const Navbar: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 w-full max-w-full ${
         isScrolled
           ? 'bg-[#050816]/90 backdrop-blur-md border-b border-white/10 shadow-lg shadow-black/40 py-2.5'
-          : 'bg-[#050816]/60 backdrop-blur-sm border-b border-white/5 py-4'
+          : 'bg-[#050816]/60 backdrop-blur-sm border-b border-white/5 py-3 sm:py-4'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between gap-2">
           {/* Left Side: GHRCEM Logo + AWS Student Builder Group */}
           <a
             href="#hero"
             onClick={(e) => handleNavClick(e, '#hero')}
-            className="flex items-center gap-3 sm:gap-4 group focus:outline-none"
+            className="flex items-center gap-2 sm:gap-4 group focus:outline-none min-w-0"
             aria-label="AWS Student Builder Group GHRCEM Home"
           >
             {/* College Logo container */}
-            <div className="h-10 sm:h-11 px-2 py-1 bg-white rounded-lg flex items-center justify-center shadow-md transition-transform duration-200 group-hover:scale-105">
+            <div className="h-9 sm:h-11 px-2 py-1 bg-white rounded-lg flex items-center justify-center shadow-md transition-transform duration-200 group-hover:scale-105 shrink-0">
               <img
                 src="/ghrcem-logo.png"
                 alt="G. H. Raisoni College of Engineering & Management, Jalgaon"
@@ -87,10 +87,10 @@ export const Navbar: React.FC = () => {
             <div className="hidden sm:block h-7 w-[1px] bg-white/20" />
 
             {/* AWS Student Builder Group Branding */}
-            <div className="flex flex-col">
+            <div className="flex flex-col min-w-0">
               <div className="flex items-center gap-1.5">
                 <AwsLogo size="sm" />
-                <span className="text-sm sm:text-base font-bold text-white tracking-tight group-hover:text-amber-400 transition-colors">
+                <span className="text-xs sm:text-base font-bold text-white tracking-tight group-hover:text-amber-400 transition-colors truncate">
                   Student Builder Group
                 </span>
               </div>
@@ -101,7 +101,7 @@ export const Navbar: React.FC = () => {
           </a>
 
           {/* Right Side: Desktop Nav Links + Explore Teams CTA */}
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-1 shrink-0">
             <div className="flex items-center space-x-1 mr-4 bg-[#0B1026]/70 px-3 py-1.5 rounded-full border border-white/10">
               {NAV_LINKS.map((link) => {
                 const isActive = activeSection === link.href.replace('#', '');
@@ -134,11 +134,12 @@ export const Navbar: React.FC = () => {
           </nav>
 
           {/* Mobile Hamburger Button */}
-          <div className="flex items-center gap-2 lg:hidden">
+          <div className="flex items-center gap-2 lg:hidden shrink-0">
+            {/* Show small Teams pill only on tablets / larger phones (>= 640px) */}
             <a
               href="#teams"
               onClick={(e) => handleNavClick(e, '#teams')}
-              className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold text-slate-950 bg-gradient-to-r from-amber-400 to-[#FF9900] shadow-sm"
+              className="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-semibold text-slate-950 bg-gradient-to-r from-amber-400 to-[#FF9900] shadow-sm"
             >
               <span>Teams</span>
               <ArrowRight className="w-3 h-3" />

@@ -11,7 +11,12 @@
     --text-secondary: #AAB4CC;
   }
 
-  html {
+  html,
+  body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    position: relative;
     scroll-behavior: smooth;
     background-color: #050816;
     color: #F8FAFC;
@@ -21,8 +26,12 @@
   body {
     margin: 0;
     padding: 0;
+  }
+
+  #root {
+    width: 100%;
+    max-width: 100vw;
     overflow-x: hidden;
-    background-color: #050816;
   }
 
   /* Custom subtle scrollbar */
